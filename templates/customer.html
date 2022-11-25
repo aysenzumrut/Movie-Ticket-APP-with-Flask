@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}
+{% from "includes/formhelpers.html" import render_field %}
+<h3>Customer Giriş Sayfası</h3>
+<small>Hoşgeldin {{session["username"]}} , Seansları Görmek ve Bilet Almak için Seanslar Sayfasına Tıklamalısın...</small>
+<hr>
+
+<a href="/seanslar" class="btn btn-success">Bilet Al</a>
+{% endblock body %}
+

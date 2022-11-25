@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <a class="navbar-brand" href="/">Ana sayfa</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/about">Filmler </a>
+          </li>
+           <li class="nav-item active">
+            <a class="nav-link" href="/seanslar">Seanslar </a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+
+          {% if session["logged_in"] %}
+          <li class="nav-item active">
+            <a class="nav-link" href="/logout">Çıkış Yap </a>
+          </li>
+            {% if session["role"]==1 %}
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/manager">Seans Ekle </a>
+            </li>   
+                        </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/seansil">Seans Sil </a>
+            </li>  
+            {% else %}
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/seanslar">Bilet Al </a>
+            </li>  
+            {% endif %}
+            
+             
+          {% else %}
+          <li class="nav-item active">
+            <a class="nav-link" href="/login">Giriş Yap </a>
+          </li>  
+          <li class="nav-item active">
+            <a class="nav-link" href="/register">Kayıt Ol </a>
+          </li>        
+          {% endif %}
+
+          
+        </ul>
+      </div>
+    </nav> 

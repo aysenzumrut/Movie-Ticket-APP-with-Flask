@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <h1>Seanslar</h1>
+
+     <br>
+    {% for movie in movies %}
+    <strong>Title:</strong> {{ movie.title }} <br>
+    <strong>Salon:</strong> {{ movie.hall }} <br>
+    <strong>Başlama Tarihi:</strong> {{ movie.show_start }} <br>
+    <strong>Film Saati:</strong> {{ movie.time }} <br>
+    
+    <a href="/biletal/{{movie.title}}" class="btn btn-success" type="submit" >Bilet Al</a>
+    <hr>
+    {% endfor %}
+
+
+{% endblock body %}

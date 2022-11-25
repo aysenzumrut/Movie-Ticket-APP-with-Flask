@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block body %}
+{% from "includes/formhelpers.html" import render_field %}
+<h3>Manager Kontrol Paneli</h3>
+<small>Hoşgeldin {{session["username"]}}</small>
+<hr>
+
+<form action="/manager" method="post">
+
+
+    <input type="text" name="title" placeholder="Filmin Adı"> <br>     <br>
+    <input type="int" name="hall" placeholder="Salon"> <br>    <br>
+	<input type="date" name="show_start" placeholder="Tarihi"> <br>    <br>
+	<input type="time" name="time" placeholder="Saati"> <br>    <br>
+
+    <input type="submit" class="btn btn-warning" value="Film Ekle">
+
+</form>
+{% endblock body %}
+
+
+
