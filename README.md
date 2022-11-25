@@ -1,4 +1,4 @@
-# https---github.com-aysenzumrut-Movie-Ticket-APP-with-Flask-tree-main
+# Movie-Ticket-APP-with-Flask
 
 In this project, a movie ticket sales application was made using the Python Flask Framework.
 
